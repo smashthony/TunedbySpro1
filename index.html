@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tuned By Spro</title> 
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <h2>Built by Passion. Tuned with Precision. Delivered Anywhere.</h2>
+      <p>
+        Welcome to <strong>Tuned By Spro</strong>, a fully remote custom-tuning service created for real enthusiasts who want real results. This platform was born from late nights in my own garage, tuning my K24A-swapped RSX by trial, error, and obsession. After dialing in builds for friends and strangers across the country, I realized most people were stuck using basemaps that didn’t fit their setup, paying too much at shops, or struggling to get clean results on their own.
+      </p>
+      <p>
+        That’s where this comes in. Whether you're stock, mildly modified, or fully built — I offer remote tuning services tailored specifically to your K-Series engine. I don’t believe in one-size-fits-all. Every car is different, and so is every tune I build. From eco-focused maps to aggressive pop/crackle calibrations, everything is crafted based on your hardware, driving style, and goals.
+      </p>
+      <p>
+        This is not just about sending a file. I’ll personally walk you through the entire process — flashing your ECU with <strong>Hondata K-Pro</strong>, explaining how to read and monitor <strong>AFR (Air-Fuel Ratio)</strong> data, and guiding you on adjustments based on datalogs. Think of me as your remote co-pilot, helping you get the most out of your setup safely and reliably.
+      </p>
+      <p>
+        My focus is drivability, efficiency, and safe power. No rushed jobs, no generic maps. If you care about making your K-Series perform like it should — whether you're dailying, racing, or somewhere in between — you're in the right place.
+      </p>
+      <p>
+        Let’s get your car running better than ever — together.
+      </p>
+    </div>
+  </section>
+
+  <!-- STAGE PRICING SECTION -->
+  <section class="pricing-section">
+    <h1>Choose Your Remote Tuning Stage</h1>
+    <div class="card-container">
+      <div class="card">
+        <h2>Stage 1 – $20</h2>
+        <button onclick="toggleDetails('desc1')">▼ View Details</button>
+        <div class="card-desc" id="desc1">
+          <p>This entry-level tune is perfect for OEM+ builds. It improves drivability, throttle feel, and fuel efficiency — ideal for daily driving and stock or lightly modded cars.</p>
+          <ul>
+            <li>Idle and throttle calibration</li>
+            <li>Improved fuel trims</li>
+            <li>Rev hang reduced</li>
+            <li>Better cold starts</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Stage 2 – $30</h2>
+        <button onclick="toggleDetails('desc2')">▼ View Details</button>
+        <div class="card-desc" id="desc2">
+          <p>Designed for bolt-on setups looking for performance. This tune optimizes cam angles, air-fuel ratios, and adds optional pops and burbles for extra sound.</p>
+          <ul>
+            <li>VTEC/VTC smoothing</li>
+            <li>Torque improvement in mid-range</li>
+            <li>Optional burble tune</li>
+            <li>Supports 410cc injectors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Stage 3 – $40</h2>
+        <button onclick="toggleDetails('desc3')">▼ View Details</button>
+        <div class="card-desc" id="desc3">
+          <p>Maximum performance for aggressive builds. This advanced tune supports high cam angles, large injectors, and track-focused throttle response with full support dialing in AFR.</p>
+          <ul>
+            <li>Full cam angle tuning</li>
+            <li>AFR data review support</li>
+            <li>Pops/crackles and anti-lag available</li>
+            <li>Built for WOT and reliability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact">
+    <div class="container">
+      <h2>Request Your Tune</h2>
+      <form name="tune-request" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="tune-request" />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="car-details" placeholder="Tell me about your build (Year, Engine, Injectors, Tune goal)" required></textarea>
+        <button type="submit" class="cta-button">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function toggleDetails(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
